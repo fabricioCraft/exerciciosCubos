@@ -43,15 +43,36 @@
 
 // Exercício 4
 
-const frutaColetada  : string = 'BANANA'
-const esteira : string[] = ['UVA', 'ACEROLA', 'MANGA', 'PERA', 'CAJU', 'BANANA', 'UVA', 'LARANJA', 'MARACUJA', 'MELANCIA']
+// const frutaColetada  : string = 'BANANA'
+// const esteira : string[] = ['UVA', 'ACEROLA', 'MANGA', 'PERA', 'CAJU', 'BANANA', 'UVA', 'LARANJA', 'MARACUJA', 'MELANCIA']
+
+// let count : number = 0
+
+// for (let fruta = 0; fruta < esteira.length; fruta++){
+//     if (esteira[fruta] === frutaColetada){
+//         count++
+//     }
+// }
+
+// console.log(count)
+
+// Exercício 5
+
+const jogadorA : number[] = [1, 4, 5, 8, 15, 14]
 
 let count : number = 0
+let media :number = 60
 
-for (let fruta = 0; fruta < esteira.length; fruta++){
-    if (esteira[fruta] === frutaColetada){
-        count++
-    }
+for(let numeracaoBola = 0; numeracaoBola < jogadorA.length; numeracaoBola++){
+    count += jogadorA[numeracaoBola]
+
 }
 
-console.log(count)
+if(count > media){
+    console.log('JOGADOR A GANHOU')
+}else if (count === media){
+    console.log('EMPATE')
+}else{
+    console.log('JOGADOR B GANHOU')
+}
+
