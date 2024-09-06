@@ -29,14 +29,29 @@
 
 // Exercício 3
 
-const notas : number[] = [9, 5, 6, 2, 0, 1]
+// const notas : number[] = [9, 5, 6, 2, 0, 1]
 
-let count = 0
+// let count = 0
 
-for (let nota = 0; nota < notas.length; nota++){
-    if (notas[nota]=== 9 || notas[nota] === 10){
+// for (let nota = 0; nota < notas.length; nota++){
+//     if (notas[nota]=== 9 || notas[nota] === 10){
+//         count++
+
+//     }
+// }
+// console.log(count)
+
+// Exercício 4
+
+const frutaColetada  : string = 'BANANA'
+const esteira : string[] = ['UVA', 'ACEROLA', 'MANGA', 'PERA', 'CAJU', 'BANANA', 'UVA', 'LARANJA', 'MARACUJA', 'MELANCIA']
+
+let count : number = 0
+
+for (let fruta = 0; fruta < esteira.length; fruta++){
+    if (esteira[fruta] === frutaColetada){
         count++
-
     }
 }
+
 console.log(count)
