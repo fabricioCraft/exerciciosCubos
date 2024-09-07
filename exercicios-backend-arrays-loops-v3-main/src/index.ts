@@ -19,11 +19,9 @@
 // }
 // console.log(resultado);
 
-
 // Exercicio 2
 
 // const ranks : string[] = ['Ana', 'Beatriz', 'Camila', 'Jorgiane', 'Maria', 'Carla']
-
 
 // console.log(ranks[ranks.length - 1])
 
@@ -78,28 +76,46 @@
 
 // Exercicio 6
 
-const botoesApertados : string[] = ['A1', 'A2', 'E', 'A1', 'A2', 'A2', 'A1', 'A1'] 
+// const botoesApertados : string[] = ['A1', 'A2', 'E', 'A1', 'A2', 'A2', 'A1', 'A1']
 
-let countA1 : number = 0
-let countA2 : number = 0
+// let countA1 : number = 0
+// let countA2 : number = 0
 
-for(let botao = 0; botao < botoesApertados.length; botao++){
-    if(botoesApertados[botao] === 'A1'){
+// for(let botao = 0; botao < botoesApertados.length; botao++){
+//     if(botoesApertados[botao] === 'A1'){
 
-    countA1++
-    } 
-    if (botoesApertados[botao] === 'A2'){
-        countA2++
+//     countA1++
+//     }
+//     if (botoesApertados[botao] === 'A2'){
+//         countA2++
+//     }
+
+// }
+
+// if (countA1 > countA2){
+//     console.log('NERD')
+// }else if (countA1 < countA2){
+//     console.log('ATLETA')
+// }else{
+//     console.log('DIVERSIFICADO')
+// }
+
+// Exercício 7
+
+const palavra = "jkknmmnlpppwew";
+const vogais: string[] = ["a", "e", "i", "o", "u"];
+let encontrado: boolean = false;
+for (let letra = 0; letra < palavra.length; letra++) {
+  for (let vogal = 0; vogal < vogais.length; vogal++) {
+    if (vogais[vogal] === palavra[letra]) {
+      encontrado = true;
+      break;
     }
-    
+  }
 }
 
-if (countA1 > countA2){
-    console.log('NERD')
-}else if (countA1 < countA2){
-    console.log('ATLETA')
-}else{
-    console.log('DIVERSIFICADO')
+if (encontrado) {
+  console.log(true);
+} else {
+  console.log(false);
 }
-
-
