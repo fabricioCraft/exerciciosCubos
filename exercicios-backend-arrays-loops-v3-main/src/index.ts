@@ -102,20 +102,51 @@
 
 // Exercício 7
 
-const palavra = "jkknmmnlpppwew";
-const vogais: string[] = ["a", "e", "i", "o", "u"];
-let encontrado: boolean = false;
-for (let letra = 0; letra < palavra.length; letra++) {
-  for (let vogal = 0; vogal < vogais.length; vogal++) {
-    if (vogais[vogal] === palavra[letra]) {
-      encontrado = true;
-      break;
+// const palavra = "jkknmmnlpppwew";
+// const vogais: string[] = ["a", "e", "i", "o", "u"];
+// let encontrado: boolean = false;
+// for (let letra = 0; letra < palavra.length; letra++) {
+//   for (let vogal = 0; vogal < vogais.length; vogal++) {
+//     if (vogais[vogal] === palavra[letra]) {
+//       encontrado = true;
+//       break;
+//     }
+//   }
+// }
+
+// if (encontrado) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+
+// Exercício 8
+
+const notas : number[] = [9, 5, 6, 2, 0]
+
+let nps : number
+let notasPromotores : number = 0
+let notasDetratores : number = 0
+let total : number = 0
+
+for(let nota = 0; nota < notas.length; nota++){
+    total ++
+    if (notas[nota] === 9 || notas[nota] === 10){
+        notasPromotores++
     }
-  }
+    if(notas[nota] >= 0 && notas[nota] <= 6 ){
+        notasDetratores++
+    }
 }
 
-if (encontrado) {
-  console.log(true);
-} else {
-  console.log(false);
-}
+nps = ((notasPromotores - notasDetratores)/total)*100
+console.log(nps + '%')
+
+// console.log(notasPromotores)
+// console.log(notasDetratores)
+// console.log(total)
+
+
+
+
