@@ -1,23 +1,15 @@
 // Exercicio 1
 
-// const rank: string[] = [
-//   "Ana",
-//   "Beatriz",
-//   "Camila",
-//   "Jorgiane",
-//   "Maria",
-//   "Carla",
-// ];
+const rank :string[] = ['Ana', 'Beatriz', 'Camila', 'Jorgiane', 'Maria', 'Carla']
 
-// let resultado = " ";
 
-// for (let i = 0; i < 3; i++) {
-//   resultado += `"${rank[i]}"`;
-//   if (i < 2) {
-//     resultado += ", ";
-//   }
-// }
-// console.log(resultado);
+const melhorLutador = rank[0]
+const segundoMelhor = rank[1]
+const terceiroMelhor = rank[2]
+
+console.log(melhorLutador + ', ' + segundoMelhor + ', ' + terceiroMelhor)
+
+
 
 // Exercicio 2
 
@@ -54,6 +46,8 @@
 
 // console.log(count)
 
+
+
 // Exercício 5
 
 // const jogadorA : number[] = [1, 4, 5, 8, 15, 14]
@@ -73,6 +67,8 @@
 // }else{
 //     console.log('JOGADOR B GANHOU')
 // }
+
+
 
 // Exercicio 6
 
@@ -100,6 +96,9 @@
 //     console.log('DIVERSIFICADO')
 // }
 
+
+
+
 // Exercício 7
 
 // const palavra = "jkknmmnlpppwew";
@@ -121,27 +120,29 @@
 // }
 
 
+
+
 // Exercício 8
 
-const notas : number[] = [9, 5, 6, 2, 0]
+// const notas : number[] = [9, 5, 6, 2, 0]
 
-let nps : number
-let notasPromotores : number = 0
-let notasDetratores : number = 0
-let total : number = 0
+// let nps : number
+// let notasPromotores : number = 0
+// let notasDetratores : number = 0
+// let total : number = 0
 
-for(let nota = 0; nota < notas.length; nota++){
-    total ++
-    if (notas[nota] === 9 || notas[nota] === 10){
-        notasPromotores++
-    }
-    if(notas[nota] >= 0 && notas[nota] <= 6 ){
-        notasDetratores++
-    }
-}
+// for(let nota = 0; nota < notas.length; nota++){
+//     total ++
+//     if (notas[nota] === 9 || notas[nota] === 10){
+//         notasPromotores++
+//     }
+//     if(notas[nota] >= 0 && notas[nota] <= 6 ){
+//         notasDetratores++
+//     }
+// }
 
-nps = ((notasPromotores - notasDetratores)/total)*100
-console.log(nps + '%')
+// nps = ((notasPromotores - notasDetratores)/total)*100
+// console.log(nps + '%')
 
 // console.log(notasPromotores)
 // console.log(notasDetratores)
