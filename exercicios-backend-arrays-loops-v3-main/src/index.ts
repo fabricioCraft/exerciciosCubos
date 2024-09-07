@@ -58,21 +58,48 @@
 
 // Exercício 5
 
-const jogadorA : number[] = [1, 4, 5, 8, 15, 14]
+// const jogadorA : number[] = [1, 4, 5, 8, 15, 14]
 
-let count : number = 0
-let media :number = 60
+// let count : number = 0
+// let media :number = 60
 
-for(let numeracaoBola = 0; numeracaoBola < jogadorA.length; numeracaoBola++){
-    count += jogadorA[numeracaoBola]
+// for(let numeracaoBola = 0; numeracaoBola < jogadorA.length; numeracaoBola++){
+//     count += jogadorA[numeracaoBola]
 
+// }
+
+// if(count > media){
+//     console.log('JOGADOR A GANHOU')
+// }else if (count === media){
+//     console.log('EMPATE')
+// }else{
+//     console.log('JOGADOR B GANHOU')
+// }
+
+// Exercicio 6
+
+const botoesApertados : string[] = ['A1', 'A2', 'E', 'A1', 'A2', 'A2', 'A1', 'A1'] 
+
+let countA1 : number = 0
+let countA2 : number = 0
+
+for(let botao = 0; botao < botoesApertados.length; botao++){
+    if(botoesApertados[botao] === 'A1'){
+
+    countA1++
+    } 
+    if (botoesApertados[botao] === 'A2'){
+        countA2++
+    }
+    
 }
 
-if(count > media){
-    console.log('JOGADOR A GANHOU')
-}else if (count === media){
-    console.log('EMPATE')
+if (countA1 > countA2){
+    console.log('NERD')
+}else if (countA1 < countA2){
+    console.log('ATLETA')
 }else{
-    console.log('JOGADOR B GANHOU')
+    console.log('DIVERSIFICADO')
 }
+
 
