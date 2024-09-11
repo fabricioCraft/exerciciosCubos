@@ -1,15 +1,35 @@
 // Exericio 1
 
-type TAlunos = {
-    matricula: String
+// type TAlunos = {
+//     matricula: String
+//     nome: String
+//     idade: Number
+// }
+
+// const alunos = {
+//     matricula: '2014A',
+//     nome: 'Ana',
+//     idade: 20
+// }
+
+// console.log(alunos)
+
+// Exercicio 2
+
+type TPrato = {
     nome: String
-    idade: Number
+    valor: Number
+    quantidade: Number
 }
 
-const alunos = {
-    matricula: '2014A',
-    nome: 'Ana',
-    idade: 20
+const informacoesPrato = {
+    nome: 'Macarrão',
+    valor:  15,
+    quantidade: 1
 }
 
-console.log(alunos)
+if(informacoesPrato.nome){
+    console.log(informacoesPrato.valor)
+}else{
+    console.log('PRATO INDISPONIVEL')
+}
