@@ -1,6 +1,7 @@
 // Exercicio 1
 
 const rank :string[] = ['Ana', 'Beatriz', 'Camila', 'Jorgiane', 'Maria', 'Carla']
+<<<<<<< HEAD
 
 
 const melhorLutador = rank[0]
@@ -10,6 +11,16 @@ const terceiroMelhor = rank[2]
 console.log(melhorLutador + ', ' + segundoMelhor + ', ' + terceiroMelhor)
 
 
+=======
+
+
+const melhorLutador = rank[0]
+const segundoMelhor = rank[1]
+const terceiroMelhor = rank[2]
+
+console.log(melhorLutador + ', ' + segundoMelhor + ', ' + terceiroMelhor)
+
+>>>>>>> ea21fc05bc4c31b1a8dba500d4612feb426c4ed9
 
 // Exercicio 2
 
