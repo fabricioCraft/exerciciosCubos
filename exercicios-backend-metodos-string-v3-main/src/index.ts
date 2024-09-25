@@ -40,46 +40,49 @@
 
 
 // Exercicio 4
+type TUsuario = {
+    rua: string
+    numero: string
+    bairro: string
+    estado: string
+}
 
-// const endereco: string = "Rua Cidade de Alma, 24, Cidade de Almeirim, AL"
+const endereco: string = "Rua Cidade de Alma, 24a, Cidade de Almeirim, AL"
+const arrayEndereco = endereco.split(',')
 
-// const enderecoSemEspaco: string = endereco.replaceAll(" ", "")
-
-// const arrayEndereco: string[] = enderecoSemEspaco.split(",")
-
-// const eNumero = typeof Number(arrayEndereco) === 'number' ? true : false
-
-
-
-
-// console.log(enderecoSemEspaco);
-// console.log(arrayEndereco);
-// console.log(eNumero)
+const usuario: TUsuario = {
+    rua: arrayEndereco[0],
+    numero: arrayEndereco[1],
+    bairro: arrayEndereco[2],
+    estado: arrayEndereco[3]
+}
 
 
+const numeroFormatado = usuario.numero.trim()
+const numeroConvertido = Number(numeroFormatado)
 
-// const arrayEndereco: string[] = enderecoSemEspaco.split(",")
+if(isNaN(numeroConvertido)){
+    console.log(false)
 
-// const eNumero = arrayEndereco[1].trim() === typeof Number ? true : false  
+}else{
+    console.log(true)
+}
 
-// console.log(arrayEndereco)
-// console.log(eNumero)
-// console.log(arrayAPartirDoNumero)
-// console.log(indexNumero);
+
 
 
 // Exercicio 5
 
-const cpf = "000000000-00"
+// const cpf = "000000000-00"
 
-const indexTraco = cpf.indexOf("-")
+// const indexTraco = cpf.indexOf("-")
 
-if (cpf.slice(0, indexTraco).length === 9 && cpf.slice(-2).length === 2) {
-    console.log ('CPF VALIDO')
-} else {
-    console.log ('CPF INVALIDO')
-}
-console.log(indexTraco);
+// if (cpf.slice(0, indexTraco).length === 9 && cpf.slice(-2).length === 2) {
+//     console.log ('CPF VALIDO')
+// } else {
+//     console.log ('CPF INVALIDO')
+// }
+// console.log(indexTraco);
 
 
 
