@@ -40,6 +40,31 @@
 
 
 // Exercicio 4
+
+//Comentário 1: Tive dificultade com o uso da função isNaN(), pois eu estava retornando true para valores 
+//que eram NaN e isso estava gerando erros no teste. Depois que eu entendi como usá-lo foi tranquilo de fazer passar
+//por todos os testes.
+
+//Comentário 2: Meu primeiro código para esse teste foi o descrito abaixo, porém eu quis imaginar um caso real em que vc recebe
+//os dados de um formulário de cliente e esses dados seriam enviados para o servidor e armazenado em um objeto.
+
+//Código anterior:
+
+/*
+const endereco: string = "Rua Cidade de Alma, 24, Cidade de Almeirim, AL"
+const arrayEndereco = endereco.split(',')
+const numeroSemEspaco = arrayEndereco[1].trim()
+const numeroConvertido = Number(numeroSemEspaco)
+
+if(isNaN(numeroConvertido)){
+    console.log(false)
+}else{
+    console.log(true)
+}
+*/
+
+
+
 type TUsuario = {
     rua: string
     numero: string
