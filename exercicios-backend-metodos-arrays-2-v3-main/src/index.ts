@@ -48,29 +48,71 @@
 
 // Exercicio 3
 
-const tipoItensCarrinho: string[] = [
-    "comida",
-    "comida",
-    "produtos gerais",
-    "bebida sem alcool",
-    "bebida sem alcool",
-    "produtos gerais",
-  ];
+// const tipoItensCarrinho: string[] = [
+//     "comida",
+//     "comida",
+//     "produtos gerais",
+//     "bebida sem alcool",
+//     "bebida sem alcool",
+//     "produtos gerais",
+//   ];
   
-const idadeCliente: number = 16;
+// const idadeCliente: number = 16;
 
-const procurarBebidaAlcoolica = tipoItensCarrinho.some((item) => {
+// const procurarBebidaAlcoolica = tipoItensCarrinho.some((item) => {
 
-    return item === 'bebida com alcool' && idadeCliente < 18
-})
+//     return item === 'bebida com alcool' && idadeCliente < 18
+// })
 
 
-if(procurarBebidaAlcoolica){
+// if(procurarBebidaAlcoolica){
 
-    console.log('COMPRA BLOQUEADA');
+//     console.log('COMPRA BLOQUEADA');
     
-}else{
+// }else{
 
-    console.log('COMPRA EFETUADA');
+//     console.log('COMPRA EFETUADA');
+// }
+
+
+// Exercicio 4
+
+type TMonstro = {
+  nome: string
+  forca: number
+  agilidade: number
+  experiencia: number
 }
 
+const monstros: TMonstro[] = [
+    {
+      nome: "Gárgula",
+      forca: 40,
+      agilidade: 15,
+      experiencia: 1,
+    },
+    {
+      nome: "Kratos",
+      forca: 50,
+      agilidade: 5,
+      experiencia: 11,
+    },
+    {
+      nome: "Saci",
+      forca: 2,
+      agilidade: 170,
+      experiencia: 70,
+    },
+  ];
+
+
+  const monstroGanhaPontos = monstros.map((monstro) => {
+
+    return {
+        ...monstro,
+        experiencia: monstro.experiencia + 10
+
+    }
+  })
+
+  console.log(monstroGanhaPontos)

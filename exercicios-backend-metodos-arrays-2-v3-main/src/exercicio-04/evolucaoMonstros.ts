@@ -7,5 +7,16 @@ type TMonstro = {
 };
 function solucao(monstros: TMonstro[]): TMonstro[] {
   // seu código aqui
+
+  const monstroGanhaPontos = monstros.map((monstro) => {
+
+    return {
+        ...monstro,
+        experiencia: monstro.experiencia + 10
+
+    }
+  })
+
+  return monstroGanhaPontos
 }
 export default solucao;
