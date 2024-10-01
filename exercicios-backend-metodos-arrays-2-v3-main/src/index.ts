@@ -23,24 +23,54 @@
 
 // Exercicio 2
 
-const cpfsCadastrados: string[] = [
-    "73168619086",
-    "92799060030",
-    "87992956010",
-    "2212442700",
-    "94209346080",
-    "30344513009",
+// const cpfsCadastrados: string[] = [
+//     "73168619086",
+//     "92799060030",
+//     "87992956010",
+//     "2212442700",
+//     "94209346080",
+//     "30344513009",
+//   ];
+
+//   const planilhaVerificada = cpfsCadastrados.every((cpf) => {
+//     return cpf.length === 11
+//   })
+
+// if(planilhaVerificada){
+//     console.log('PLANILHA VALIDA');
+    
+// }else{
+//     console.log('PLANILHA INVALIDA');
+    
+// }
+
+
+
+// Exercicio 3
+
+const tipoItensCarrinho: string[] = [
+    "comida",
+    "comida",
+    "produtos gerais",
+    "bebida sem alcool",
+    "bebida sem alcool",
+    "produtos gerais",
   ];
+  
+const idadeCliente: number = 16;
 
-  const planilhaVerificada = cpfsCadastrados.every((cpf) => {
-    return cpf.length === 11
-  })
+const procurarBebidaAlcoolica = tipoItensCarrinho.some((item) => {
 
-if(planilhaVerificada){
-    console.log('PLANILHA VALIDA');
+    return item === 'bebida com alcool' && idadeCliente < 18
+})
+
+
+if(procurarBebidaAlcoolica){
+
+    console.log('COMPRA BLOQUEADA');
     
 }else{
-    console.log('PLANILHA INVALIDA');
-    
+
+    console.log('COMPRA EFETUADA');
 }
 
