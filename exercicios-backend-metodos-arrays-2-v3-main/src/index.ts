@@ -1,25 +1,24 @@
 // Exercício 1
 
-// const livros = [
-//     "As Branquelas",
-//     "Lagoa Azul",
-//     "Mágico de Oz",
-//     "Matilda",
-//     "O Resgate do Soldado Ryan",
-//   ];
-// const nomeDoLivro= "Matilda";
+const livros: string[] = ["Harry Potter", "O Senhor dos Anéis", "Crepúsculo", "Percy Jackson"];
+const livroProcurado: string = "Crepúsculo";
 
-// const livroEncontrado = livros.findIndex((livro) => {
-//     return livro === nomeDoLivro
-// })
+const encontrarLivros = (estandeDeLivros: string[], livroProcurado: string) => {
 
-// if(livroEncontrado !== -1){
-//     console.log(`O LIVRO ESTA NA POSICAO ${livroEncontrado}`);
-        
-// }else{
-//     console.log('NENHUM LIVRO ENCONTRADO');
-    
-// }
+  const livroEncontrado = estandeDeLivros.findIndex((livro) => {
+
+    return livro === livroProcurado
+  })
+
+  if(livroEncontrado !== -1){
+
+    return `O LIVRO ESTA NA POSICAO ${livroEncontrado+1}`
+  }
+
+  return 'NENHUM LIVRO ENCONTRADO'
+}
+
+console.log(encontrarLivros(livros, livroProcurado))
 
 // Exercicio 2
 
@@ -119,62 +118,62 @@
 
 
 // Exercicio 5
-type TAnuncio = {
+// type TAnuncio = {
 
-  titulo: string
-  descricao: string
-  preco: number
-}
+//   titulo: string
+//   descricao: string
+//   preco: number
+// }
 
-const anuncios: TAnuncio[] = [
-  {
-    titulo: "Apartamento Reformado",
-    descricao: "Apartamento confortável e seguro",
-    preco: 3000,
-  },
-  {
-    titulo: "Casa Branca",
-    descricao: "Casa com 3 quartos e 2 banheiros",
-    preco: 1500.67,
-  },
-  {
-    titulo: "Apartamento com piscina",
-    descricao: "Apartamento confortável, com piscina, sauna e churrasqueira",
-    preco: 5600,
-  },
-  {
-    titulo: "Casa com 4 quartos",
-    descricao: "A casa possui 4 quartos, 2 banheiros e uma sala de estar",
-    preco: 2900,
-  },
-  {
-    titulo: "Kitnet",
-    descricao: "Kitnet aconchegante, com lareira e banheira privada",
-    preco: 4325,
-  },
-];
+// const anuncios: TAnuncio[] = [
+//   {
+//     titulo: "Apartamento Reformado",
+//     descricao: "Apartamento confortável e seguro",
+//     preco: 3000,
+//   },
+//   {
+//     titulo: "Casa Branca",
+//     descricao: "Casa com 3 quartos e 2 banheiros",
+//     preco: 1500.67,
+//   },
+//   {
+//     titulo: "Apartamento com piscina",
+//     descricao: "Apartamento confortável, com piscina, sauna e churrasqueira",
+//     preco: 5600,
+//   },
+//   {
+//     titulo: "Casa com 4 quartos",
+//     descricao: "A casa possui 4 quartos, 2 banheiros e uma sala de estar",
+//     preco: 2900,
+//   },
+//   {
+//     titulo: "Kitnet",
+//     descricao: "Kitnet aconchegante, com lareira e banheira privada",
+//     preco: 4325,
+//   },
+// ];
 
 
-const precoMaximo: number = 3500;
+// const precoMaximo: number = 3500;
 
-const filtrarAnuncio = (anuncios: TAnuncio[], precoMaximo: number) => {
-  const anunciosFiltradosComPrecoMaximo = anuncios.filter((anuncio) => {
+// const filtrarAnuncio = (anuncios: TAnuncio[], precoMaximo: number) => {
+//   const anunciosFiltradosComPrecoMaximo = anuncios.filter((anuncio) => {
 
-    return anuncio.preco <= precoMaximo
-  })
+//     return anuncio.preco <= precoMaximo
+//   })
   
-  if(anunciosFiltradosComPrecoMaximo.length > 0){
+//   if(anunciosFiltradosComPrecoMaximo.length > 0){
   
-    return console.log(anunciosFiltradosComPrecoMaximo);
+//     return console.log(anunciosFiltradosComPrecoMaximo);
     
-  }else{
+//   }else{
   
-    return console.log('NAO ENCONTRADO');
-  }
+//     return console.log('NAO ENCONTRADO');
+//   }
 
-}
+// }
 
-filtrarAnuncio(anuncios, precoMaximo)
+// filtrarAnuncio(anuncios, precoMaximo)
 
 
 
