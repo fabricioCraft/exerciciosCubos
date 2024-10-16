@@ -1,0 +1,24 @@
+{
+  "name": "exercicios-backend-primeiro-servidor-v3-main",
+  "version": "1.0.0",
+  "description": "### Instruções para abrir o projeto",
+  "main": "index.js",
+  "type": "module",
+
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  }
+}
