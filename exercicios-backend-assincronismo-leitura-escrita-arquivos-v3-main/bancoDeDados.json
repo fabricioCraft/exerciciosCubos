@@ -1,0 +1,19 @@
+{
+  "proximoId": 3,
+  "lendas": [
+    {
+      "id": 1,
+      "titulo": "A Loira do Banheiro",
+      "origem": "Brasil",
+      "tipo": "Fantasma",
+      "descricao": "Uma lenda sobre o espírito de uma mulher loira que assombra banheiros de escolas."
+    },
+    {
+      "id": 2,
+      "titulo": "O Homem do Saco",
+      "origem": "Vários Países",
+      "tipo": "Monstro",
+      "descricao": "Uma lenda sobre um homem que captura crianças desobedientes em um saco."
+    }
+  ]
+}
