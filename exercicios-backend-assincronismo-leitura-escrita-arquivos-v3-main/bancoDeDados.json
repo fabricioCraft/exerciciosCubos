@@ -14,6 +14,13 @@
       "origem": "Vários Países",
       "tipo": "Monstro",
       "descricao": "Uma lenda sobre um homem que captura crianças desobedientes em um saco."
+    },
+    {
+      "id": 3,
+      "titulo": "A Mulher de Branco",
+      "origem": "México",
+      "tipo": "Fantasma",
+      "descricao": "Uma lenda sobre o espírito de uma mulher que aparece nas estradas à noite, pedindo carona."
     }
   ]
 }
