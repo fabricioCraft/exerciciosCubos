@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import bancoDeDados, { TExame } from "../../bancoDeDados";
 import {v4 as uuidv4 } from "uuid";
-import fs from 'fs/promises'
 
 
 
