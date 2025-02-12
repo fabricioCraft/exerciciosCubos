@@ -1,5 +1,8 @@
 import { Request, Response } from "express";
-import bancoDeDados from "../../bancoDeDados";
+import bancoDeDados, { TExame } from "../../bancoDeDados";
+import {v4 as uuidv4 } from "uuid";
+import fs from 'fs/promises'
+
 
 
 export const testeExame = (req: Request, res: Response) => {
@@ -10,28 +13,55 @@ export const testeExame = (req: Request, res: Response) => {
 export const cadastrarExame = (req: Request, res: Response) => {
 
     const {
-        id,
         examinador, 
         candidato, 
-        quantidadeEliminatorias, 
-        quantidadeGraves, 
-        quantidadeMedias, 
-        quantidadeLeves, 
-        aprovado
+        quantidade_eliminatorias, 
+        quantidade_graves, 
+        quantidade_medias, 
+        quantidade_leves
     } = req.body
 
-    const novoExame = {
-        id,
+    if(!examinador == undefined || !examinador == null || 
+        !candidato == undefined || !candidato == null || 
+        !quantidade_eliminatorias == undefined || !quantidade_eliminatorias == null || 
+        !quantidade_graves == undefined || !quantidade_graves == null || 
+        !quantidade_medias == undefined || !quantidade_medias == null || 
+        !quantidade_leves == undefined || !quantidade_leves == null) {
+        res.status(400).json({mensagem: 'Todos os campos devem ser preenchidos'})
+        return
+    }
+
+
+    let aprovado = true
+
+    const faltas = {
+        quantidade_leves: quantidade_leves*1,
+        quantidade_medias: quantidade_medias*2,
+        quantidade_graves: quantidade_graves*3,
+    }
+
+    if(quantidade_eliminatorias > 0 || (faltas.quantidade_leves + faltas.quantidade_medias +faltas.quantidade_graves) > 3 ){
+        aprovado = false
+
+    }
+
+
+
+
+    const novoExame: TExame = {
+        id: uuidv4(),
         examinador,
         candidato,
-        quantidadeEliminatorias,
-        quantidadeGraves,
-        quantidadeMedias,
-        quantidadeLeves,
+        quantidadeEliminatorias: quantidade_eliminatorias,
+        quantidadeGraves: quantidade_graves,
+        quantidadeMedias: quantidade_medias,
+        quantidadeLeves: quantidade_leves,
         aprovado
+        
     }
 
     bancoDeDados.exames.push(novoExame)
+
 
     res.status(201).json(novoExame)
     return

@@ -1,4 +1,4 @@
-type TExame = {
+export type TExame = {
   id: string,
   examinador: string,
   candidato: string,
