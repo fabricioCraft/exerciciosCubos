@@ -65,3 +65,16 @@ export const cadastrarExame = (req: Request, res: Response) => {
     res.status(201).json(novoExame)
     return
 }
+
+export const listarExames = (req: Request, res: Response) => {
+
+    if(req.query.aprovado){
+        const listaAprovados = bancoDeDados.exames.filter((exame) => exame.aprovado === true)
+
+        res.status(200).json(listaAprovados)
+        return
+        
+    }
+
+    res.status(200).json(bancoDeDados.exames)
+}

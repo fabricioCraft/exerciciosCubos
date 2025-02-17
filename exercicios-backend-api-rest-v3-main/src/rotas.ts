@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { cadastrarExame, testeExame } from './controladores/exame'
+import { cadastrarExame, listarExames, testeExame } from './controladores/exame'
 
 
 const rotas = Router()
@@ -7,5 +7,6 @@ const rotas = Router()
 rotas.get('/', testeExame)
 
 rotas.post('/exames',cadastrarExame)
+rotas.get('/exames', listarExames)
 
 export default rotas
