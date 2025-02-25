@@ -77,4 +77,73 @@ export const listarExames = (req: Request, res: Response) => {
     }
 
     res.status(200).json(bancoDeDados.exames)
+    return
+}
+
+export const editarExame = (req: Request, res: Response) => {
+    const {id} = req.params
+
+    const {
+        examinador, 
+        candidato, 
+        quantidade_eliminatorias, 
+        quantidade_graves, 
+        quantidade_medias, 
+        quantidade_leves
+    } = req.body
+
+    
+    if(!examinador|| 
+        !candidato|| 
+        !quantidade_eliminatorias|| 
+        !quantidade_graves|| 
+        !quantidade_medias|| 
+        !quantidade_leves) {
+
+        res.status(404).json({mensagem: 'Todos os campos devem ser preenchidos'})
+        return
+    }
+
+    const exame = bancoDeDados.exames.find((exame) => {
+        return exame.id === id
+    })
+
+    if(!exame){
+        res.status(404).json({mensagem: 'Id não encontrado'})
+        return
+    }
+
+
+    exame.examinador = examinador
+    exame.candidato = candidato
+    exame.quantidadeEliminatorias = quantidade_eliminatorias
+    exame.quantidadeGraves = quantidade_graves
+    exame.quantidadeMedias = quantidade_medias
+    exame.quantidadeLeves = quantidade_leves
+
+
+
+
+    res.status(204).send()
+    return
+
+}
+
+export const deletarExame = (req: Request, res: Response) => {
+
+    const { id } =req.params
+
+    const exameIndex = bancoDeDados.exames.findIndex((exame) => {
+        return exame.id === id
+    })
+
+    if(exameIndex === -1){
+        res.status(404).json({mensagem: 'Id não encontrado'})
+        return
+    }
+
+    bancoDeDados.exames.splice(exameIndex, 1)
+
+    res.status(204).send()
+    return
 }
